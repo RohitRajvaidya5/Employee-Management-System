@@ -4,27 +4,27 @@
 
 ## **Screenshots** 📸
 
-![Login](/Screenshots/Login.png)
+![Login](/screenshots/Login.png)
 **Login** 🔐
 
 <br>
 
-![Sign Up](/Screenshots/Sign%20Up.png)
+![Sign Up](</screenshots/Sign Up.png>)
 **Sign Up** ✍️
 
 <br>
 
-![Home Page](/Screenshots/Home%20Page.png)
+![Home Page](</screenshots/Home Page.png>)
 **Home Page** 🏠
 
 <br>
 
-![Dashboard](/Screenshots/Dashboard.png)
+![Dashboard](/screenshots/Dashboard.png)
 **Dashboard** 📊
 
 <br>
 
-![Employee Data](/Screenshots/Employee%20Data.png)
+![Employee Data](</screenshots/Employee Data.png>)
 **Employee Data** 📑
 
 <br>
