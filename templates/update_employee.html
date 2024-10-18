@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <title>Update Employee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Check for stored theme in localStorage or use system preference
+        if (localStorage.getItem('color-theme') === 'dark' || 
+            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center h-screen dark:text-white">
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center text-gray-800 dark:text-white mb-6">Update Employee {{ employee[1] }} {{ employee[2] }}</h1>
+        <form action="" method="POST" class="space-y-6">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Column to update:</label>
+                <input type="text" name="column_name" required 
+                       class="mt-1 p-3 w-full border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-300 focus:border-transparent">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">New value:</label>
+                <input type="text" name="changed_value" required 
+                       class="mt-1 p-3 w-full border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-300 focus:border-transparent">
+            </div>
+
+            <button type="submit" 
+                    class="w-full bg-blue-500 dark:bg-blue-600 text-white py-3 rounded-md hover:bg-blue-600 dark:hover:bg-blue-700 transition duration-300">
+                Update Employee
+            </button>
+        </form>
+
+        <a href="/" class="block text-center text-blue-500 dark:text-blue-400 mt-6 hover:underline">Back to Employee List</a>
+    </div>
+
+    <!-- <div class="mt-4 flex justify-center">
+        <button onclick="toggleDarkMode()" class="bg-gray-800 dark:bg-gray-200 dark:text-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-700 dark:hover:bg-gray-300 transition duration-200">
+            Toggle Dark Mode
+        </button>
+    </div> -->
+</body>
+</html>

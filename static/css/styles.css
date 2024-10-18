@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent body scroll */
+}
+
+iframe {
+    overflow: hidden;
+}
+
+/* General styling for the body and container */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(27, 24, 39);
+    width: 100vw;
+}
+
+/* Main container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading styling */
+.heading-class {
+    text-align: start;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    margin-left: 2.5rem; /* Consider using 'auto' for horizontal centering instead of a fixed value */
+}
+
+/* Flexbox layout for the graphs in a responsive grid */
+.graph-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+   
+}
+
+/* Styling individual graphs */
+.graph-class {
+    background-color: white;
+    width: 35vw;
+    margin: 50px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease; /* Add transition for hover effect */
+}
+
+.graph-class:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhance hover effect */
+}
+
+/* Employee data table styling */
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .graph-grid {
+        grid-template-columns: 1fr; /* Stacks graphs in one column */
+    }
+}
+
+/* Styling for data table container */
+.div-class-2 {
+    border-radius: 20px;
+    margin: 20px auto; /* Center the table with auto margins */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ensure consistency with other components */
+    width: 35vw;
+}
+
+
