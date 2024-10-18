@@ -1,5 +1,19 @@
 # EmpoTrack - Employee Management System
 
+
+## Screenshots
+
+![Login](path/to/image)
+![Sign Up](path/to/image)
+![Home Page](path/to/image)
+![Dashboard](path/to/image)
+![Employee Data](path/to/image)
+
+
+
+
+
+
 EmpoTrack is a Python-based employee management system leveraging MySQL for data storage and manipulation, with a frontend built using HTML, CSS, and Tailwind CSS. It supports full CRUD operations for employee data and provides powerful data analysis capabilities using Plotly for visualizations.
 
 Key Features:
