@@ -9,6 +9,8 @@ import mysql.connector
 import plotly.graph_objects as go
 import dash
 from dash.dependencies import Input, Output
+import os
+from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
