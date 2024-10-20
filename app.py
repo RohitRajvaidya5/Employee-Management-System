@@ -10,16 +10,19 @@ import plotly.graph_objects as go
 import dash
 from dash.dependencies import Input, Output
 
+# Load environment variables from .env file
+load_dotenv()
+
 app = Flask(__name__)
-app.secret_key = '1029384756'  # Secret key for session management
+app.secret_key = os.getenv('SECRET_KEY')
 
 def create_connection():
     try:
         connection = mysql.connector.connect(
-            host='localhost',
-            database='employee_data',
-            user='root',
-            password='Mnbvcxz@123'
+            host=os.getenv('DB_HOST'),
+            database=os.getenv('DB_NAME'),
+            user=os.getenv('DB_USER'),
+            password=os.getenv('DB_PASSWORD')  # This will get the password from the environment
         )
         if connection.is_connected():
             return connection
@@ -53,13 +56,17 @@ queries = {
     """,
 }
 
-# Database connection configuration
+
+
+# Access environment variables
 DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "Mnbvcxz@123",
-    "database": "employee_data"
+    "host": os.getenv('DB_HOST'),
+    "user": os.getenv('DB_USER'),
+    "password": os.getenv('DB_PASSWORD'),
+    "database": os.getenv('DB_NAME')
 }
+
+
 
 def fetch_data(query):
     """Execute a query and fetch results."""
