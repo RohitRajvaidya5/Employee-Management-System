@@ -1,0 +1,1 @@
+web: gunicorn app: "C:\Users\RRAJVAID\OneDrive - Capgemini\Desktop\Employee Management System\app.py"
